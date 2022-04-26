@@ -19,8 +19,10 @@ REM Instalar Fusion
 	echo #            Instalando GLPI Inventory            #
 	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 	echo.   
-        GLPI-Agent-1.2-x64.msi /quiet SERVER=https://innerbit.dyndns.info/glpi/front/inventory.php RUNNOW=1 ADDLOCAL=full ADD_FIREWALL_EXCEPTION=1 DEBUG=level EXECMODE=1 HTML=1 TAG=%empresa% TASKS="" LOCAL=C:\Tools\
+        GLPI-Agent-1.2-x64.msi /quiet SERVER=https://innerbit.dyndns.info/glpi/front/inventory.php RUNNOW=1 ADDLOCAL=ALL ADD_FIREWALL_EXCEPTION=1 DEBUG=level HTML=1 TAG=%empresa% TASKS="" LOCAL=C:\Tools\
+		pause
 REM Instalar Fusion
+
 	cls
 	echo.
 	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
