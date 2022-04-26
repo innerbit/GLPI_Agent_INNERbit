@@ -16,32 +16,15 @@ REM Instalar Fusion
 	cls
 	echo.
 	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
-	echo #            Instalando Fusion Inventory            #
+	echo #            Instalando GLPI Inventory            #
 	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 	echo.   
-        cscript Fusion-Inventory.vbs
+        GLPI-Agent-1.2-x64.msi /quiet SERVER=https://innerbit.dyndns.info/glpi/front/inventory.php ADDLOCAL=full ADD_FIREWALL_EXCEPTION=1 DEBUG=level EXECMODE=1 HTML=1 TAG=%empresa% TASKS=""
 REM Instalar Fusion
 	cls
 	echo.
 	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
-	echo #            Fusion Inventory Instalado             #
-	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
-	echo.
-REM Copiar arquivo do anydesk
-	cls
-	echo.
-	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
-	echo #            Copiando Arquivo do AnyDesk para       #
-    echo #                   FusionInventory                 #
-	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
-	echo.
-        robocopy anydesk\ *AnyDesk.pm* C:\Tools\
-        xcopy C:\Tools\AnyDesk.pm "C:\Program Files\FusionInventory-Agent\perl\agent\FusionInventory\Agent\Task\Inventory\Generic\Remote_Mgmt" /f /l /-y
-        explorer C:\Program Files\FusionInventory-Agent\perl\agent\FusionInventory\Agent\Task\Inventory\Generic\Remote_Mgmt
-	cls
-	echo.
-	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
-	echo #            Arquivo AnyDesk Copiado                #
+	echo #            GLPI Inventory Instalado             #
 	echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 	echo.
     	cls
