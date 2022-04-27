@@ -120,14 +120,14 @@ Setup = "GLPI-Agent-" & SetupVersion & "-" & SetupArchitecture & ".msi"
 ' Repair
 '    Repair the installation when Setup is still installed.
 '
-Repair = "No"
+Repair = "Yes"
 
 ' Verbose
 '    Enable or disable the information messages.
 '
 '    It's advisable to use Verbose = "Yes" with 'cscript //nologo ...'.
 '
-Verbose = "No"
+Verbose = "Yes"
 
 ' RunUninstallFusionInventoryAgent
 '    Set to "Yes" to first uninstall FusionInventory Agent
