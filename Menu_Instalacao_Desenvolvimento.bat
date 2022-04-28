@@ -16,7 +16,7 @@ REM Cliente
 		echo FastCopy 
 		echo.
 		echo ====================
-		echo 1. Instalacao via MSI
+		echo 1. Instalacao via MSI x64
 		echo 2. Instalacao via VBS
 		echo.
 		echo 0. Voltar para Menu Principal
