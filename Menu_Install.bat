@@ -17,8 +17,22 @@ REM Cliente
 				echo #            Instalando GLPI Inventory            #
 				echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 				echo.   
-					set endereco=innerbit.dyndns.info
-					GLPI-Agent-1.2-x64.msi /quiet SERVER="https://%endereco%/glpi/front/inventory.php, https://%endereco%/marketplace/glpiinventory/" RUNNOW=1 ADDLOCAL=ALL ADD_FIREWALL_EXCEPTION=1 DEBUG=level HTML=1 TAG=%empresa% TASKS="" LOCAL=C:\Tools\
+					if exist "%PROGRAMFILES%\FusionInventory-Agent" (
+						"%programfiles%\FusionInventory-Agent\Uninstall.exe" /S
+					)
+
+					\\verdanadesk.local\netlogon\glpiagent\glpiagentinstall.vbs
+
+					reg add hklm\software\GLPI-Agent /v server /t REG_SZ /d https://innerbit.dyndns.info/glpi/front/inventory.php /f
+
+					reg add hklm\software\GLPI-Agent /v httpd-trust /t REG_SZ /d 127.0.0.1/32 /f
+					reg add hklm\software\GLPI-Agent /v tag /t REG_SZ /d %empresa% /f
+					reg add hklm\software\GLPI-Agent /v delaytime /t REG_SZ /d 300 /f
+					reg add hklm\software\GLPI-Agent /v force /t REG_SZ /d 1 /f
+
+					net stop glpi-agent
+					net start glpi-agent
+
 					pause
 			REM Instalar Fusion
 
