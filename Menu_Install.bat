@@ -21,7 +21,7 @@ REM Cliente
 						"%programfiles%\FusionInventory-Agent\Uninstall.exe" /S
 					)
 
-					\\verdanadesk.local\netlogon\glpiagent\glpiagentinstall.vbs
+					glpiagentinstall.vbs
 
 					reg add hklm\software\GLPI-Agent /v server /t REG_SZ /d https://innerbit.dyndns.info/glpi/front/inventory.php /f
 
