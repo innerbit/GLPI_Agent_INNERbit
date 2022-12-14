@@ -23,7 +23,7 @@ REM Cliente
 
 					glpiagentinstall.vbs
 
-					reg add hklm\software\GLPI-Agent /v server /t REG_SZ /d https://innerbit.dyndns.info/glpi/front/inventory.php /f
+					reg add hklm\software\GLPI-Agent /v server /t REG_SZ /d https://suporte.innerbit.com.br/glpi/front/inventory.php /f
 
 					reg add hklm\software\GLPI-Agent /v httpd-trust /t REG_SZ /d 127.0.0.1/32 /f
 					reg add hklm\software\GLPI-Agent /v tag /t REG_SZ /d %empresa% /f
