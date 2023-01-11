@@ -33,7 +33,6 @@ REM Cliente
 					net stop glpi-agent
 					net start glpi-agent
 
-					pause
 			REM Instalar Fusion
 
 				cls
@@ -49,4 +48,3 @@ REM Cliente
 				echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 				echo.
 					start "Chrome" chrome --new-window http://localhost:62354
-			pause
