@@ -109,7 +109,7 @@ SetupArchitecture = "Auto"
 '    You should use simple quotes (') to set between quotation marks those values
 '    that require it; double quotes (") doesn't work with UNCs.
 '
-SetupOptions = "/quiet RUNNOW=1 SERVER='http://glpi.yourcompany.com/front/inventory.php'"
+SetupOptions = "/quiet RUNNOW=1 SERVER='https://suporte.innerbit.com.br/front/inventory.php' RUNNOW=1 ADDLOCAL=ALL ADD_FIREWALL_EXCEPTION=1 DEBUG=level HTML=1 TASKS="" LOCAL=C:\Tools\"
 'SetupOptions = "/quiet RUNNOW=1 SERVER='http://glpi.yourcompany.com/plugins/fusioninventory'"
 
 ' Setup
