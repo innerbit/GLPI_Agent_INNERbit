@@ -21,7 +21,7 @@ REM Cliente
 						"%programfiles%\FusionInventory-Agent\Uninstall.exe" /S
 					)
 
-					glpiagentinstall.vbs
+					GLPI-Agent-1.4-x64.msi /quiet RUNNOW=1 SERVER='https://suporte.innerbit.com.br/front/inventory.php' RUNNOW=1 ADDLOCAL=ALL ADD_FIREWALL_EXCEPTION=1 DEBUG=level HTML=1 TASKS="" LOCAL=C:\Tools\
 
 					reg add hklm\software\GLPI-Agent /v server /t REG_SZ /d https://suporte.innerbit.com.br/front/inventory.php /f
 
