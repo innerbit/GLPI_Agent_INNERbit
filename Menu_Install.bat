@@ -10,6 +10,8 @@ REM Cliente
 				echo.
 					set /p empresa="Empresa/Cliente: " 
 					echo %empresa%
+					set /p setor="Setor: " 
+					echo %setor%
 			REM Instalar Fusion
 				cls
 				echo.
@@ -26,7 +28,7 @@ REM Cliente
 					reg add hklm\software\GLPI-Agent /v server /t REG_SZ /d https://suporte.innerbit.com.br/front/inventory.php /f
 
 					reg add hklm\software\GLPI-Agent /v httpd-trust /t REG_SZ /d 127.0.0.1/32 /f
-					reg add hklm\software\GLPI-Agent /v tag /t REG_SZ /d %empresa% /f
+					reg add hklm\software\GLPI-Agent /v tag /t REG_SZ /d %empresa%-%setor% /f
 					reg add hklm\software\GLPI-Agent /v delaytime /t REG_SZ /d 300 /f
 					reg add hklm\software\GLPI-Agent /v force /t REG_SZ /d 1 /f
 
@@ -48,3 +50,9 @@ REM Cliente
 				echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 				echo.
 					start "Chrome" chrome --new-window http://localhost:62354
+				echo.
+					exit
+				echo .
+				echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+				echo #              Instalação finalizada                #
+				echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
