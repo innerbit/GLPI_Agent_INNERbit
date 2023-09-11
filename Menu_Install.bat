@@ -23,9 +23,9 @@ REM Cliente
 						"%programfiles%\FusionInventory-Agent\Uninstall.exe" /S
 					)
 
-					GLPI-Agent-1.5-x64.msi /quiet RUNNOW=1 SERVER='https://suporte.innerbit.com.br/marketplace/glpiinventory.php' RUNNOW=1 ADDLOCAL=ALL ADD_FIREWALL_EXCEPTION=1 AGENTMONITOR=1 DEBUG=level HTML=1 TASKS="" LOCAL=C:\Tools\
+					GLPI-Agent-1.5-x64.msi /quiet RUNNOW=1 SERVER='https://suporte.innerbit.com.br/marketplace/glpiinventory.php, https://suporte.innerbit.com.br/front/inventory.php' RUNNOW=1 ADDLOCAL=ALL ADD_FIREWALL_EXCEPTION=1 AGENTMONITOR=1 DEBUG=level HTML=1 TASKS="" LOCAL=C:\Tools\
 
-					reg add hklm\software\GLPI-Agent /v server /t REG_SZ /d https://suporte.innerbit.com.br/marketplace/glpiinventory.php /f
+					reg add hklm\software\GLPI-Agent /v server /t REG_SZ /d "https://suporte.innerbit.com.br/marketplace/glpiinventory.php, https://suporte.innerbit.com.br/front/inventory.php" /f
 
 					reg add hklm\software\GLPI-Agent /v httpd-trust /t REG_SZ /d 127.0.0.1/32 /f
 					reg add hklm\software\GLPI-Agent /v tag /t REG_SZ /d %empresa%-%setor% /f
